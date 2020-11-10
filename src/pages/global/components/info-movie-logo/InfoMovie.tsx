@@ -12,9 +12,11 @@ export default function InfoMovie(props: InputProps) {
     };
 
     return (
-        <p style={style}>
-            info<p className="spotlight">Movie</p>
-        </p>
+        <div className="info-movie-brand">
+            <p style={style}>
+                info<p className="spotlight">Movie</p>
+            </p>
+        </div>
     );
 
 

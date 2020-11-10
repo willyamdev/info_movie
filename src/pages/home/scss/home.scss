@@ -1,5 +1,17 @@
 .home-page{
     margin: 0 auto;
     width: 75%;
+
+    .content{
+        margin-top: 40px;
+        width: 100%;
+        display: flex;
+
+        .main-content{
+            flex-grow: 0;
+            flex-shrink: 0;
+            width: 70%;
+        }
+    }
 }
 

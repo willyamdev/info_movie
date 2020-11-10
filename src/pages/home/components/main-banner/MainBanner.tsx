@@ -6,7 +6,8 @@ import './css/main-banner.css';
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     title: string,
     movieBanner?: string,
-    genres: Array<string>
+    genres: Array<string>,
+    linkMovie: string
 }
 
 export default function MainBanner(props: InputProps) {
@@ -17,15 +18,16 @@ export default function MainBanner(props: InputProps) {
             <nav className="navigation-bar">
                 <InfoMovie fontSize={30} />
                 <div className="navigation-bar-links">
-                    <Link to="/">Movies</Link>
-                    <Link to="/">Genres</Link>
-                    <Link to="/">About Us</Link>
-                    <Link to="/">Account</Link>
+                    <Link to="/">Filmes</Link>
+                    <Link to="/">Gêneros</Link>
+                    <Link to="/">Artigos</Link>
+                    <Link to="/">Sobre</Link>
+                    <Link to="/">Conta</Link>
                 </div>
             </nav>
 
             <div className="banner-movie-info-content">
-                <h3>Premiere now</h3>
+                <h3>Em estreia</h3>
                 <h2>{props.title}</h2>
                 <div className="genres-container">
                     {props.genres.map((data) => (
@@ -34,8 +36,8 @@ export default function MainBanner(props: InputProps) {
                         </div>
                     ))}
                 </div>
-                <button onClick={()=> window.open('https://www.youtube.com/watch?v=Y5BejyusI2s', '_blank')}>
-                    Watch Now
+                <button onClick={() => window.open(props.linkMovie, '_blank')}>
+                    Assista agora
                 </button>
             </div>
 

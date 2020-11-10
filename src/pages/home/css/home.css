@@ -2,5 +2,15 @@
   margin: 0 auto;
   width: 75%;
 }
+.home-page .content {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+}
+.home-page .content .main-content {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 70%;
+}
 
 /*# sourceMappingURL=home.css.map */

@@ -1,9 +1,9 @@
-p{
+.info-movie-brand p {
     color: white;
     display: inline;
     font-weight: 500;
 }
 
-.spotlight{
+.info-movie-brand .spotlight {
     color: red;
 }

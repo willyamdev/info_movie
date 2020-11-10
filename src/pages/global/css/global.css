@@ -13,6 +13,10 @@ a{
     position: relative;
 }
 
+body{
+    background-color: #E1EDFC;
+}
+
 button:focus{
     outline: none;
 }
