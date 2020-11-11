@@ -62,7 +62,7 @@ export default function Home(): JSX.Element {
 
     return (
         <section className="home-page">
-            <MainBanner title="Mulher Maravilha" genres={["Ação", "Aventura"]} linkMovie="https://www.youtube.com/watch?v=Y5BejyusI2s" />
+            <MainBanner title="Mulher Maravilha 1984" genres={["Ação", "Aventura"]} linkMovie="https://www.youtube.com/watch?v=Y5BejyusI2s" />
 
             <div className="content">
                 <div className="main-content">

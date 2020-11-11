@@ -1,7 +1,6 @@
 .trending .top {
   font-size: 0.9em;
   display: flex;
-  margin-bottom: 15px;
 }
 .trending .top p {
   font-weight: 500;
@@ -10,7 +9,41 @@
 .trending .top a {
   color: black;
 }
+.trending .trending-slider-container {
+  position: relative;
+}
+.trending .trending-slider-container .slider-button {
+  color: red;
+  cursor: pointer;
+  position: absolute;
+  background-color: white;
+  z-index: 4;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.5);
+}
+.trending .trending-slider-container .slider-button:active {
+  background-color: #dfdfdf;
+}
+.trending .trending-slider-container .left-prev {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+}
+.trending .trending-slider-container .right-next {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+}
 .trending .trending-itens-list {
+  scroll-behavior: smooth;
+  padding-top: 20px;
   display: flex;
   overflow-x: auto;
 }
@@ -35,9 +68,6 @@
   position: relative;
 }
 .trending .trending-itens-list .trending-item:hover {
-  -webkit-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.5);
   transform: translateY(-5px);
 }
 .trending .trending-itens-list .trending-item::after {
