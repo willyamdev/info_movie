@@ -31,8 +31,8 @@ export default function Trending(props: PropsTypes) {
     return (
         <div className="trending">
             <div className="top">
-                <p>Tendências</p>
-                <Link to="/">Ver mais..</Link>
+                <p>Trending</p>
+                <Link to="/">More..</Link>
             </div>
 
             <div className="trending-slider-container">

@@ -11,6 +11,8 @@ import dolitle from './images/dolitle.jpeg';
 import freeguy from './images/freeguy.jpeg';
 import nilo from './images/nilo.jpg';
 import bob from './images/bob.jpeg';
+import joker from './images/joker.jpg';
+import sonic from './images/sonic.jpeg';
 
 
 export default function Home(): JSX.Element {
@@ -19,17 +21,17 @@ export default function Home(): JSX.Element {
         {
             bannerImage: Tenet,
             title: "Tenet",
-            premiereTime: "29 de Outubro de 2020"
+            premiereTime: "29 October 2020"
         },
         {
             bannerImage: Halloween,
-            title: "O Halloween do Hubie",
-            premiereTime: "20 de Novembro de 2020"
+            title: "Hubie Halloween",
+            premiereTime: "20 November 2020"
         },
         {
             bannerImage: Bloodshot,
             title: "Bloodshot",
-            premiereTime: "12 de Março de 2020"
+            premiereTime: "12 March 2020"
         }
     ]);
 
@@ -51,18 +53,18 @@ export default function Home(): JSX.Element {
             movieTrailer: 'https://youtu.be/hej47fWFLQs'
         },
         {
-            bannerImage: bob,
+            bannerImage: joker,
             movieTrailer: 'https://youtu.be/hej47fWFLQs'
         },
         {
-            bannerImage: bob,
+            bannerImage: sonic,
             movieTrailer: 'https://youtu.be/hej47fWFLQs'
         }
     ]);
 
     return (
         <section className="home-page">
-            <MainBanner title="Mulher Maravilha 1984" genres={["Ação", "Aventura"]} linkMovie="https://www.youtube.com/watch?v=Y5BejyusI2s" />
+            <MainBanner title="Wonder Woman 1984" genres={["Action"]} linkMovie="https://www.youtube.com/watch?v=Y5BejyusI2s" />
 
             <div className="content">
                 <div className="main-content">

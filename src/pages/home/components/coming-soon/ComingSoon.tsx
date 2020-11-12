@@ -17,8 +17,8 @@ export default function ComingSoon(props: PropsTypes): JSX.Element {
     return (
         <div className="coming-soon">
             <div className="top">
-                <p>Em breve</p>
-                <Link to="/">Ver mais..</Link>
+                <p>Coming Soon</p>
+                <Link to="/">More..</Link>
             </div>
 
             {
@@ -28,7 +28,7 @@ export default function ComingSoon(props: PropsTypes): JSX.Element {
 
                         <div className="info-content">
                             <h4>{data.title}</h4>
-                            <p>Estreia em</p>
+                            <p>Premiere in</p>
                             <h4>{data.premiereTime}</h4>
                         </div>
                     </div>
