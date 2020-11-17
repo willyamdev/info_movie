@@ -13,9 +13,18 @@ import nilo from './images/nilo.jpg';
 import bob from './images/bob.jpeg';
 import joker from './images/joker.jpg';
 import sonic from './images/sonic.jpeg';
+import mortal from './images/mortal.jpeg';
+import dragonheart from './images/dragonheart.jpg';
+import Jinglejangle from './images/jingle.jpeg';
+import AmericanMurder from './images/murder.jpg';
+import Dreamkatcher from './images/dreamkatch.jpeg';
+import UnknownOrigins from './images/uncknow.jpg';
 
 import ComingSoonMovie from '../../models/coming-soon-movie';
 import TrendingMovie from '../../models/trending-movie';
+import RecentViews from './components/recent views/recent-views';
+import RecentShow from './components/recent-show/recent-show';
+import Movie from '../../models/movie';
 
 
 export default function Home(): JSX.Element {
@@ -23,9 +32,15 @@ export default function Home(): JSX.Element {
     const [comingSoonMovies, setComingSoonMovies] = useState<Array<ComingSoonMovie>>([
         new ComingSoonMovie('Tenet', Tenet, '29 October 2020'),
         new ComingSoonMovie('Hubie Halloween', Halloween, '20 November 2020'),
+        new ComingSoonMovie('Unknown Origins', UnknownOrigins, '28 August 2020'),
         new ComingSoonMovie('Bloodshot', Bloodshot, '12 March 2020'),
-        new ComingSoonMovie('Bloodshot', Bloodshot, '12 March 2020'),
-        new ComingSoonMovie('Bloodshot', Bloodshot, '12 March 2020'),
+    ]);
+
+    const [recentViews, setRecentViews] = useState<Array<ComingSoonMovie>>([
+        new ComingSoonMovie('Dragon Heart', dragonheart, '04 February 2020'),
+        new ComingSoonMovie('Jingle Jangle', Jinglejangle, '06 November 2020'),
+        new ComingSoonMovie('American Murder', AmericanMurder, '30 September 2020'),
+        new ComingSoonMovie('Dreamkatcher', Dreamkatcher, '22 March 2020'),
     ]);
 
     const [trendingMovies, setTrendingMovies] = useState<Array<TrendingMovie>>([
@@ -44,6 +59,10 @@ export default function Home(): JSX.Element {
             <div className="content">
                 <div className="main-content">
                     <Trending moviesList={trendingMovies} />
+                    <div className="recents-content">
+                        <RecentViews movieList={recentViews}/>
+                        <RecentShow recentMovie={new Movie('Mortal Kombat', mortal)}/>
+                    </div>
                 </div>
 
                 <ComingSoon moviesList={comingSoonMovies} />

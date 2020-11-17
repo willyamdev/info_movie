@@ -12,5 +12,8 @@
   flex-shrink: 0;
   width: 70%;
 }
+.home-page .content .main-content .recents-content {
+  display: flex;
+}
 
 /*# sourceMappingURL=home.css.map */

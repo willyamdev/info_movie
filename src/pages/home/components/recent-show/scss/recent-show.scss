@@ -1,0 +1,35 @@
+.recent-show{
+    flex-basis: 40%;
+
+    .top {
+        font-size: 0.9em;
+        display: flex;
+        margin-bottom: 15px;
+
+        p {
+            font-weight: 500;
+            margin-right: auto;
+        }
+
+        a {
+            color: black;
+        }
+
+    }
+
+
+    .recent-show-item{
+
+        border-radius: 10px;
+
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: 150px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+}

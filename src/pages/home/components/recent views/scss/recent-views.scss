@@ -1,0 +1,72 @@
+.recent-views {
+    flex-basis: 60%;
+
+    .top {
+        font-size: 0.9em;
+        display: flex;
+        margin-bottom: 15px;
+
+        p {
+            font-weight: 500;
+            margin-right: auto;
+        }
+
+        a {
+            color: black;
+        }
+    }
+
+    .recent-movie-item {
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 50px;
+            object-fit: cover;
+            height: 50px;
+            border-radius: 12px;
+        }
+
+        .info-container {
+            padding: 0px 20px;
+            display: flex;
+            flex: 1;
+
+            .info-content {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+
+                span:nth-child(1) {
+                    font-weight: 500;
+                    font-size: 1em;
+                }
+
+                span:nth-child(2) {
+                    margin-top: 5px;
+                    font-size: 0.8em;
+                }
+            }
+
+            button {
+                border: 1px solid black;
+                border-radius: 100px;
+                background: none;
+                cursor: pointer;
+                width: 100px;
+                height: 35px;
+                color: black;
+                transition: 0.3s;
+                font-weight: 400;
+
+                &:hover {
+                    background-color: black;
+                    color: white;
+                }
+            }
+
+        }
+    }
+}
