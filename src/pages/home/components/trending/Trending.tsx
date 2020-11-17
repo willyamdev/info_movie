@@ -1,14 +1,15 @@
-import React, { InputHTMLAttributes, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './css/trending.css';
-import { PlayCircleOutline, NavigateNext, NavigateBefore } from '@material-ui/icons';
+import { PlayCircleOutline, NavigateNext, NavigateBefore } from '@material-ui/icons'
+import TrendingMovie from '../../../../models/trending-movie';
 
-export type TrendingMovie = {
-    bannerImage: string,
-    movieTrailer: string
-};
+// export type TrendingMovie = {
+//     bannerImage: string,
+//     movieTrailer: string
+// };
 
-interface PropsTypes extends InputHTMLAttributes<HTMLInputElement> {
+interface PropsTypes{
     moviesList: Array<TrendingMovie>
 }
 
@@ -18,7 +19,7 @@ export default function Trending(props: PropsTypes) {
 
     function next() {
         let trendingElement = trendingList.current;
-        console.log(trendingElement?.scrollWidth);
+        // console.log(trendingElement?.scrollWidth);
 
         trendingElement?.scrollTo(trendingElement?.scrollWidth, 0);
     }
@@ -47,7 +48,7 @@ export default function Trending(props: PropsTypes) {
                     {
                         props.moviesList.map((data) => (
                             <div className="trending-item" style={{
-                                backgroundImage: `url(${data.bannerImage})`,
+                                backgroundImage: `url(${data.movieCape})`,
                             }}>
                                 <PlayCircleOutline style={{ fontSize: "60px", zIndex: 2 }} color="secondary" />
                             </div>

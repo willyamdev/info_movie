@@ -1,14 +1,15 @@
-import React, { InputHTMLAttributes } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './css/coming-soon.css';
+import ComingSoonMovie from '../../../../models/coming-soon-movie';
 
-export type ComingSoonMovie = {
-    bannerImage: string,
-    title: string,
-    premiereTime: string
-};
+// export type ComingSoonMovie = {
+//     bannerImage: string,
+//     title: string,
+//     premiereTime: string
+// };
 
-interface PropsTypes extends InputHTMLAttributes<HTMLInputElement> {
+interface PropsTypes {
     moviesList: Array<ComingSoonMovie>,
 }
 
@@ -24,12 +25,12 @@ export default function ComingSoon(props: PropsTypes): JSX.Element {
             {
                 props.moviesList.map((data) => (
                     <div className="coming-soon-item">
-                        <img src={data.bannerImage} alt="" />
+                        <img src={data.movieCape} alt="" />
 
                         <div className="info-content">
-                            <h4>{data.title}</h4>
+                            <h4>{data.movieTitle}</h4>
                             <p>Premiere in</p>
-                            <h4>{data.premiereTime}</h4>
+                            <h4>{data.premiereDate}</h4>
                         </div>
                     </div>
                 ))

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import ComingSoon, { ComingSoonMovie } from './components/coming-soon/ComingSoon';
+import ComingSoon from './components/coming-soon/ComingSoon';
 import MainBanner from './components/main-banner/MainBanner';
 import './css/home.css';
-import Trending, {TrendingMovie} from './components/trending/Trending';
+import Trending from './components/trending/Trending';
 
 import Halloween from './images/o-halloween-do-hubie.jpg';
 import Bloodshot from './images/bloodshot.jpg';
@@ -14,52 +14,27 @@ import bob from './images/bob.jpeg';
 import joker from './images/joker.jpg';
 import sonic from './images/sonic.jpeg';
 
+import ComingSoonMovie from '../../models/coming-soon-movie';
+import TrendingMovie from '../../models/trending-movie';
+
 
 export default function Home(): JSX.Element {
 
     const [comingSoonMovies, setComingSoonMovies] = useState<Array<ComingSoonMovie>>([
-        {
-            bannerImage: Tenet,
-            title: "Tenet",
-            premiereTime: "29 October 2020"
-        },
-        {
-            bannerImage: Halloween,
-            title: "Hubie Halloween",
-            premiereTime: "20 November 2020"
-        },
-        {
-            bannerImage: Bloodshot,
-            title: "Bloodshot",
-            premiereTime: "12 March 2020"
-        }
+        new ComingSoonMovie('Tenet', Tenet, '29 October 2020'),
+        new ComingSoonMovie('Hubie Halloween', Halloween, '20 November 2020'),
+        new ComingSoonMovie('Bloodshot', Bloodshot, '12 March 2020'),
+        new ComingSoonMovie('Bloodshot', Bloodshot, '12 March 2020'),
+        new ComingSoonMovie('Bloodshot', Bloodshot, '12 March 2020'),
     ]);
 
     const [trendingMovies, setTrendingMovies] = useState<Array<TrendingMovie>>([
-        {
-            bannerImage: dolitle,
-            movieTrailer: 'https://youtu.be/hej47fWFLQs'
-        },
-        {
-            bannerImage: freeguy,
-            movieTrailer: 'https://youtu.be/hej47fWFLQs'
-        },
-        {
-            bannerImage: nilo,
-            movieTrailer: 'https://youtu.be/hej47fWFLQs'
-        },
-        {
-            bannerImage: bob,
-            movieTrailer: 'https://youtu.be/hej47fWFLQs'
-        },
-        {
-            bannerImage: joker,
-            movieTrailer: 'https://youtu.be/hej47fWFLQs'
-        },
-        {
-            bannerImage: sonic,
-            movieTrailer: 'https://youtu.be/hej47fWFLQs'
-        }
+        new TrendingMovie('Sonic', sonic, 'https://youtu.be/hej47fWFLQs'),
+        new TrendingMovie('Dolitle', dolitle, 'https://youtu.be/hej47fWFLQs'),
+        new TrendingMovie('Nilo', nilo, 'https://youtu.be/hej47fWFLQs'),
+        new TrendingMovie('Sponge Bob', bob, 'https://youtu.be/hej47fWFLQs'),
+        new TrendingMovie('Joker', joker, 'https://youtu.be/hej47fWFLQs'),
+        new TrendingMovie('Freeguy', freeguy, 'https://youtu.be/hej47fWFLQs'),
     ]);
 
     return (
@@ -68,7 +43,7 @@ export default function Home(): JSX.Element {
 
             <div className="content">
                 <div className="main-content">
-                    <Trending moviesList={trendingMovies}/>
+                    <Trending moviesList={trendingMovies} />
                 </div>
 
                 <ComingSoon moviesList={comingSoonMovies} />

@@ -1,9 +1,9 @@
-import React, { InputHTMLAttributes } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import InfoMovie from '../../../global/components/info-movie-logo/InfoMovie';
 import './css/main-banner.css';
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface InputProps{
     title: string,
     movieBanner?: string,
     genres: Array<string>,
