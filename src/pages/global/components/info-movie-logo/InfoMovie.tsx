@@ -1,7 +1,7 @@
-import React, { InputHTMLAttributes } from 'react';
+import React from 'react';
 import './css/info-movie.css';
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface InputProps {
     fontSize?: number;
 }
 
