@@ -1,6 +1,6 @@
+@import url("./home-responsiveness.css");
 .home-page {
   margin: 0 auto;
-  width: 75%;
 }
 .home-page .content {
   margin-top: 40px;
@@ -10,7 +10,6 @@
 .home-page .content .main-content {
   flex-grow: 0;
   flex-shrink: 0;
-  width: 70%;
 }
 .home-page .content .main-content .recents-content {
   display: flex;

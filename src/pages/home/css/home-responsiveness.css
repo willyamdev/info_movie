@@ -1,0 +1,73 @@
+/* Super-Small devices (landscape phones, 576px and up)*/
+@media (min-width: 200px) and (max-width: 575px) {
+  .home-page {
+    width: 100%;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+  .content .main-content {
+    width: 100%;
+    padding: 0px 15px;
+  }
+  .content .main-content .recents-content {
+    flex-direction: column;
+  }
+}
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .home-page {
+    width: 100%;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+  .content .main-content {
+    width: 100%;
+    padding: 0px 15px;
+  }
+  .content .main-content .recents-content {
+    flex-direction: column;
+  }
+}
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .home-page {
+    width: 100%;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+  .content .main-content {
+    width: 100%;
+    padding: 0px 15px;
+  }
+  .content .main-content .recents-content {
+    flex-direction: column;
+  }
+}
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .home-page {
+    width: 85%;
+  }
+
+  .content .main-content {
+    width: 75%;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  .home-page {
+    width: 75%;
+  }
+
+  .content .main-content {
+    width: 75%;
+  }
+}
+
+/*# sourceMappingURL=home-responsiveness.css.map */

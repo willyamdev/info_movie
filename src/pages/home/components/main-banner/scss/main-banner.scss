@@ -1,3 +1,5 @@
+@import url('./main-banner-responsiveness.css');
+
 .main-banner {
     width: 100%;
     padding: 20px;
@@ -8,17 +10,10 @@
     background-position: center center;
     background-size: cover;
 
-    border-radius: 0px 0px 20px 20px;
-
-    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.4);
-
     .navigation-bar {
         display: flex;
         align-items: center;
-
-        .info-movie-brand {
-            margin-right: auto;
-        }
+        justify-content: space-between;
 
         .navigation-bar-links {
             a {
@@ -52,7 +47,6 @@
     }
 
     .banner-movie-info-content {
-        margin-left: 50px;
         margin-top: 100px;
         color: white;
         
