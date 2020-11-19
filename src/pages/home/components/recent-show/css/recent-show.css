@@ -1,5 +1,6 @@
 .recent-show {
   flex-basis: 40%;
+  margin-top: 20px;
 }
 .recent-show .top {
   font-size: 0.9em;

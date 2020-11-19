@@ -46,8 +46,8 @@ export default function Trending(props: PropsTypes) {
 
                 <div className="trending-itens-list" ref={trendingList}>
                     {
-                        props.moviesList.map((data) => (
-                            <div className="trending-item" style={{
+                        props.moviesList.map((data, index) => (
+                            <div className="trending-item" key={index} style={{
                                 backgroundImage: `url(${data.movieCape})`,
                             }}>
                                 <PlayCircleOutline style={{ fontSize: "60px", zIndex: 2 }} color="secondary" />

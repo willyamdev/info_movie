@@ -23,8 +23,8 @@ export default function ComingSoon(props: PropsTypes): JSX.Element {
             </div>
 
             {
-                props.moviesList.map((data) => (
-                    <div className="coming-soon-item">
+                props.moviesList.map((data, index) => (
+                    <div className="coming-soon-item" key={index}>
                         <img src={data.movieCape} alt="" />
 
                         <div className="info-content">

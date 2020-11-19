@@ -15,8 +15,8 @@ export default function RecentViews(props: PropsTypes) {
             </div>
 
             {
-                props.movieList.map((data) => (
-                    <div className="recent-movie-item">
+                props.movieList.map((data, index) => (
+                    <div className="recent-movie-item" key={index}>
                         <img src={data.movieCape} alt="" />
                         <div className="info-container">
                             <div className="info-content">
