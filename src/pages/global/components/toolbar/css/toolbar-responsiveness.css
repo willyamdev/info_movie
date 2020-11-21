@@ -11,7 +11,22 @@
   }
 }
 /* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .toolbar-menu-btn {
+    display: none !important;
+  }
+}
 /* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .toolbar-menu-btn {
+    display: none !important;
+  }
+}
 /* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  .toolbar-menu-btn {
+    display: none !important;
+  }
+}
 
 /*# sourceMappingURL=toolbar-responsiveness.css.map */

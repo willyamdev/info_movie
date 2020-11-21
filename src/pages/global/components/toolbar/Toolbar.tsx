@@ -2,9 +2,13 @@ import React, { useEffect, useRef } from 'react';
 import InfoMovie from '../info-movie-logo/InfoMovie';
 import './css/toolbar.css';
 import { Link } from 'react-router-dom';
+import MenuIcon from '@material-ui/icons/Menu';
+import { connect, useDispatch } from 'react-redux';
+import * as Actions from '../../../../store/actions';
 
-export default function Toolbar() {
+function Toolbar() {
 
+    const dispatch = useDispatch();
     let toolbarRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -38,7 +42,9 @@ export default function Toolbar() {
                 <Link to="/">About Us</Link>
                 <Link to="/">Account</Link>
             </div>
+            <MenuIcon className="toolbar-menu-btn" onClick={()=> dispatch(Actions.handleMenu(true))}/>
         </div>
     );
-
 }
+
+export default connect(null)(Toolbar);
